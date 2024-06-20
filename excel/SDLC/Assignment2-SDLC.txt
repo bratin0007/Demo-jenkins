@@ -1,0 +1,56 @@
+Assignment 2: Develop a case study analyzing the implementation of SDLC phases in a real-world
+engineering project. Evaluate how Requirement Gathering, Design, Implementation, Testing,
+Deployment, and Maintenance contribute to project outcomes.
+
+
+
+ANS...
+
+Case Study: Implementing SDLC in a Smart Home Automation System
+Project Overview
+
+
+A tech company developed a Smart Home Automation System to control home appliances via a mobile
+app.
+1. Requirement Gathering
+	What They Did:
+	Talked to future users to understand their needs.
+	Wrote down what the system should do.
+Why It Matters:
+o Clear requirements prevented misunderstandings and ensured the project met user
+needs.
+2. Design
+What They Did:
+Planned how the system would work.
+Created diagrams and models of the system.
+Why It Matters:
+A good plan made the development process smoother and helped identify potential
+problems early.
+3. Implementation
+What They Did:
+Wrote the code for the system in small, manageable parts.
+Regularly reviewed and tested the code.
+Why It Matters:
+Ensured that the system was built correctly and all parts worked together.
+4. Testing
+What They Did:
+Tested each part of the system individually and together.
+Had real users test the system before final release.
+Why It Matters:
+Found and fixed bugs, ensuring the system worked well for users.
+5. Deployment
+What They Did:
+Gradually released the system to users.
+Provided instructions and help for new users.
+Why It Matters:
+Smooth release ensured users could start using the system easily and without problems.
+6. Maintenance
+What They Did:
+Monitored the system and made improvements.
+Fixed any new issues that came up.
+Why It Matters:
+Kept the system running well and improved it over time based on user feedback.
+Conclusion
+Following the SDLC phases helped the tech company build a high-quality Smart Home Automation
+System that met user needs, was reliable, and could be easily improved in the future. Each phase was
+crucial for the project's success.

@@ -1,0 +1,67 @@
+Assignment 1:
+Agile Project Planning - Create a one-page project plan for a new software feature using Agile
+planning techniques. Include backlog items with estimated story points and a prioritized list of user
+stories.
+Agile Project Plan for New Software Feature
+Project Overview:
+Feature: Enhanced User Profile Management
+Goal: To allow users to customize and manage their profiles more effectively, improving user
+engagement and satisfaction.
+Sprint Planning:
+Sprint Duration: 2 weeks
+Number of Sprints: 3 (6 weeks total)
+
+Product Backlog:
+User Story:---------
+
+1. As a user, I want to upload a profile picture, so that I can
+personalize my account
+2. As a user, I want to update my personal information, so that my
+profile is current
+3. As a user, I want to set my account preferences, so that I can
+customize my user experience.
+4. As a user, I want to link my social media accounts, so that I can
+easily share updates.
+5. As a user, I want to view my account activity history, so that I can keep track of changes
+6. As an admin, I want to manage user roles and permissions, so that I can control access levels.
+7. As a user, I want to delete my account, so that I can permanently
+remove my data if desired.
+8. As a user, I want to receive notifications for account changes, so that I am aware of updates.
+
+Sprint Breakdown:------------
+Sprint 1:
+User Story 1: Upload a profile picture 
+User Story 2: Update personal information 
+User Story 6: Manage user roles and permissions (Admin)
+
+Pending Backlog:-----------------
+
+
+User Story:-----
+
+3. As a user, I want to set my account preferences, so that I can
+customize my user experience
+4. As a user, I want to link my social media accounts, so that I can
+easily share updates.
+5. As a user, I want to view my account activity history, so that I can keep track of changes.
+7. As a user, I want to delete my account, so that I can permanently
+remove my data if desired.
+8. As a user, I want to receive notifications for account changes, so that I am aware of updates.
+
+
+Sprint 2:
+User Story 3: Set account preferences 
+User Story 4: Link social media accounts
+User Story 7: Delete account 
+
+Pending Backlog:-----
+User Story -------
+
+5. As a user, I want to view my account activity history, so that I can keep track of changes.
+8. As a user, I want to receive notifications for account changes, so that I am aware of updates.
+
+
+Sprint 3:
+User Story 5: View account activity history 
+User Story 8: Receive notifications for account changes 
+Buffer for bug fixes and improvements

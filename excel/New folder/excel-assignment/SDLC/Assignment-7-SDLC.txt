@@ -1,0 +1,58 @@
+Assignment 2:
+Daily Standup Simulation - Write a script for a Daily Standup meeting for a development team working
+on the software feature from Above assignment . Address a common challenge and incorporate a solution
+into the communication flow.
+
+
+
+
+Daily Standup Meeting Script
+Time: 9:00 AM
+Duration: 15 minutes
+Participants: Development Team, Product Owner, Scrum Master
+-------------------------------------------------------------------------------------------------------------------------------
+----------
+Scrum Master: Good morning, everyone! Let's get started with our daily standup. We'll follow our usual
+format: What did you work on yesterday? What will you work on today? Any blockers? Let's begin with
+Rahul.
+Rahul (Frontend Developer):
+Yesterday: I finished the profile picture upload functionality and started working on the UI for updating
+personal information.
+Today: I'll complete the UI for updating personal information and start implementing form validation.
+Blockers: No blockers currently.
+Scrum Master: Great progress, Rahul. Next, Virat.
+Virat (Backend Developer):
+Yesterday: I worked on the backend API for managing user roles and permissions.
+Today: I plan to finish the API and start integrating it with the frontend.
+Blockers: I'm facing a challenge with the role-based access control logic. It's taking longer than expected.
+Scrum Master: Thanks for sharing, Virat. Let's address that after the standup. Now, Michel.
+Michel (QA Tester):
+Yesterday: I completed testing the profile picture upload feature. Found a few minor bugs and logged
+them.
+Today: I'll test the personal information update functionality once Rahul completes it.
+Blockers: No blockers from my side.
+Scrum Master: Excellent, Michel. David, you're up next.
+David (DevOps Engineer):
+Yesterday: I worked on setting up the continuous integration pipeline for our new features.
+Today: I'll finish the CI pipeline setup and ensure it's running smoothly.
+Blockers: None at the moment.
+Scrum Master: Good to hear, David. Finally, Emma.
+Emma (Product Owner):
+Yesterday: I reviewed the user stories and updated the acceptance criteria based on the feedback we
+received.
+Today: I'll be prioritizing the backlog and preparing for the next sprint planning session.
+Blockers: No blockers.
+Scrum Master: Thanks, Emma. Now, addressing Virat's challenge with the role-based access control
+logic, does anyone have experience with this or suggestions for resources that might help?
+Rahul: I faced a similar issue in a previous project. Virat, I can pair with you after the standup to help
+debug the logic. We could also look into some best practice documentation on role-based access control
+to see if we're missing anything.
+Virat: That sounds great, Rahul. Thank you!
+Scrum Master: Excellent teamwork! Let's ensure we stay on track with our sprint goals. If there's nothing
+else, let's wrap up. Remember, if any other issues arise, feel free to reach out. Have a productive day,
+everyone!
+End of Standup
+Key Points Addressed:
+Daily Updates: Each team member provided updates on their progress and plans.
+Blockers: Identified and addressed a common challenge with role-based access control logic.
+Solution: Suggested pair programming and utilizing best practice documentation to resolve the issue.

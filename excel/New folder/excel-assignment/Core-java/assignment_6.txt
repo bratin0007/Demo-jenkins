@@ -1,0 +1,256 @@
+Assignment 6:
+Task 1: Generics and Type Safety
+Create a generic Pair class that holds two objects of different types, and write a method to return a reversed version of the pair.
+
+
+/*
+* Assignment6: Generics and Type Safety
+* Create a generic Pair class that holds two objects 
+* of different types, and write a method to return a 
+* reversed version of the pair.
+*/
+
+
+package a6_genericpair;
+
+public class PairTest {
+    public static void main(String[] args) {
+        Pair<String, Integer> pair = new Pair<>("Hello", 42);
+        System.out.println("Original Pair: " + pair);
+
+        Pair<Integer, String> reversedPair = pair.reversed();
+        System.out.println("Reversed Pair: " + reversedPair);
+    }
+}
+
+
+/*
+* Assignment6: Generics and Type Safety
+* Create a generic Pair class that holds two objects 
+* of different types, and write a method to return a 
+* reversed version of the pair.
+*/
+
+package a6_genericpair;
+
+public class Pair<T, U> {
+    private T first;
+    private U second;
+
+    public Pair(T first, U second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T getFirst() {
+        return first;
+    }
+
+    public void setFirst(T first) {
+        this.first = first;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+
+    public void setSecond(U second) {
+        this.second = second;
+    }
+
+    public Pair<U, T> reversed() {
+        return new Pair<>(second, first);
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
+    }
+}/*
+* Assignment6: Generics and Type Safety
+* Create a generic Pair class that holds two objects 
+* of different types, and write a method to return a 
+* reversed version of the pair.
+*/
+
+package a6_genericpair;
+
+public class Pair<T, U> {
+    private T first;
+    private U second;
+
+    public Pair(T first, U second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T getFirst() {
+        return first;
+    }
+
+    public void setFirst(T first) {
+        this.first = first;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+
+    public void setSecond(U second) {
+        this.second = second;
+    }
+
+    public Pair<U, T> reversed() {
+        return new Pair<>(second, first);
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
+    }
+}/*
+* Assignment6: Generics and Type Safety
+* Create a generic Pair class that holds two objects 
+* of different types, and write a method to return a 
+* reversed version of the pair.
+*/
+
+package a6_genericpair;
+
+public class Pair<T, U> {
+    private T first;
+    private U second;
+
+    public Pair(T first, U second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T getFirst() {
+        return first;
+    }
+
+    public void setFirst(T first) {
+        this.first = first;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+
+    public void setSecond(U second) {
+        this.second = second;
+    }
+
+    public Pair<U, T> reversed() {
+        return new Pair<>(second, first);
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
+    }
+}/*
+* Assignment6: Generics and Type Safety
+* Create a generic Pair class that holds two objects 
+* of different types, and write a method to return a 
+* reversed version of the pair.
+*/
+
+package a6_genericpair;
+
+public class Pair<T, U> {
+    private T first;
+    private U second;
+
+    public Pair(T first, U second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T getFirst() {
+        return first;
+    }
+
+    public void setFirst(T first) {
+        this.first = first;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+
+    public void setSecond(U second) {
+        this.second = second;
+    }
+
+    public Pair<U, T> reversed() {
+        return new Pair<>(second, first);
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
+    }
+}/*
+* Assignment6: Generics and Type Safety
+* Create a generic Pair class that holds two objects 
+* of different types, and write a method to return a 
+* reversed version of the pair.
+*/
+
+package a6_genericpair;
+
+public class Pair<T, U> {
+    private T first;
+    private U second;
+
+    public Pair(T first, U second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T getFirst() {
+        return first;
+    }
+
+    public void setFirst(T first) {
+        this.first = first;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+
+    public void setSecond(U second) {
+        this.second = second;
+    }
+
+    public Pair<U, T> reversed() {
+        return new Pair<>(second, first);
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
+    }
+}
+
+
+
+

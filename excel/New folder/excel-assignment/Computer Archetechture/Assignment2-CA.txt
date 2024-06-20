@@ -1,0 +1,23 @@
+Assignment 2: Identify a real-world application for both parallel computing and networked systems. Explain how these technologies are used and why they are important in that context.
+Answer: Imagine a large e-commerce company that needs to process millions of transactions per day. To handle this massive amount of data efficiently, they employ parallel computing and networked systems.
+
+Parallel Computing:
+
+In parallel computing, tasks are divided among multiple processors or computing units, allowing them to work simultaneously on different parts of the problem. For our example, let's say the e-commerce company uses parallel computing to process incoming orders.
+Instead of processing each order sequentially on a single server, they divide the workload among multiple servers or CPU cores. Each server or core processes a subset of orders independently and simultaneously. This significantly reduces the time required to process all orders compared to sequential processing.
+Importance of Parallel Computing:
+Speed: Parallel computing allows tasks to be completed faster by leveraging multiple computing resources simultaneously.
+Scalability: As the workload increases, more computing resources can be added to handle the load without sacrificing performance.
+Efficiency: By distributing tasks efficiently, parallel computing optimizes resource usage, leading to cost savings and improved performance.
+
+Networked Systems:
+
+Networked systems involve multiple computers or devices connected through a network, enabling communication and data exchange between them. In our example, the e-commerce company utilizes networked systems for various purposes such as managing inventory, processing payments, and communicating with customers.
+For instance, when a customer places an order on the company's website, the order information needs to be transmitted to different systems for processing. This includes updating inventory databases, processing payment transactions, and sending order confirmation emails.
+
+Importance of Networked Systems:
+Data Sharing: Networked systems facilitate seamless sharing of data and resources among different components of a system.
+Communication: They enable real-time communication between different parts of a system, allowing for efficient coordination and collaboration.
+Scalability: Networked systems can scale horizontally by adding more nodes or devices to the network, allowing the system to handle increased loads and traffic.
+
+Combining parallel computing with networked systems allows the e-commerce company to efficiently process a large volume of transactions, manage inventory in real-time, and provide a seamless shopping experience for customers.

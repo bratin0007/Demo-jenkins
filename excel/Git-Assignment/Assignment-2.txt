@@ -1,0 +1,40 @@
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Bratin Mallick\Git\sample>git init
+Initialized empty Git repository in C:/Bratin Mallick/Git/sample/.git/
+
+C:\Bratin Mallick\Git\sample>git add .
+
+C:\Bratin Mallick\Git\sample>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   sample.txt
+C:\Bratin Mallick\Git\sample>git branch -m feature
+
+C:\Bratin Mallick\Git\sample>git commit -m "feature branch"
+[feature (root-commit) 539634d] feature branch
+ 2 files changed, 94 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 sample.txt
+
+C:\Bratin Mallick\Git\sample>git remote add origin http://10.10.16.125:8929/b84user28/sample.git
+
+C:\Bratin Mallick\Git\sample>git push origin feature
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 2.86 KiB | 976.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: To create a merge request for feature, visit:
+remote:   http://gitlab.rpsconsulting.in:8929/b84user28/sample/-/merge_requests/new?merge_request%5Bsource_branch%5D=feature
+remote:
+To http://10.10.16.125:8929/b84user28/sample.git
+ * [new branch]      feature -> feature

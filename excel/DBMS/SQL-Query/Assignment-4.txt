@@ -1,0 +1,20 @@
+-- 1. Begin a transaction
+-- (In Oracle, a transaction begins implicitly with any DML statement, so there's no explicit BEGIN TRANSACTION statement)
+
+-- 2. Insert a new record into the 'orders' table
+INSERT INTO orders (order_id, customer_id, order_date, order_value)
+VALUES (12345, 67890, TO_DATE('2024-06-10', 'YYYY-MM-DD'), 250.00);
+
+-- 3. Commit the transaction
+COMMIT;
+
+-- 4. Begin another transaction for the update and rollback
+-- (This will be implicit with the next DML statement)
+
+-- 5. Update the 'products' table
+UPDATE products
+SET stock_quantity = stock_quantity - 10
+WHERE product_id = 54321;
+
+-- 6. Rollback the transaction
+ROLLBACK;

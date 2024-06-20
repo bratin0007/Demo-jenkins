@@ -1,0 +1,30 @@
+C:\Bratin Mallick\Git\sample>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sample.txt
+
+
+C:\Bratin Mallick\Git\sample>git branch -m main
+
+C:\Bratin Mallick\Git\sample>git commit -m "initial commit"
+[main 769cb1d] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.txt
+
+C:\Bratin Mallick\Git\sample>git remote add origin http://10.10.16.125:8929/b84user28/sample.git
+error: remote origin already exists.
+
+C:\Bratin Mallick\Git\sample>git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To http://10.10.16.125:8929/b84user28/sample.git
+   eaf2c7c..769cb1d  main -> main
+
+C:\Bratin Mallick\Git\sample>

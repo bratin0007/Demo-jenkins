@@ -1,0 +1,37 @@
+Select *
+FROM 
+    customers
+INNER JOIN 
+    orders 
+ON 
+    customers.customer_id = orders.customer_id
+WHERE 
+    orders.order_value > (
+        SELECT 
+            AVG(order_value) 
+        FROM 
+            orders
+    );
+
+
+
+
+................................................................
+
+SELECT 
+    customer_id, 
+    name, 
+    region
+FROM 
+    customers
+WHERE 
+    region = 'East'
+UNION
+SELECT 
+    customer_id, 
+    name, 
+    region
+FROM 
+    customers
+WHERE 
+    region = 'West';

@@ -1,0 +1,40 @@
+Assignment 7: Prepare a series of SQL statements to INSERT new records into the library tables, UPDATE existing records with new information, and DELETE records based on specific criteria. Include BULK INSERT operations to load data from an external source.
+
+-------------------------------------------------------------------------------------------
+
+-- Step 1: Insert new records
+INSERT INTO Books (BookID, Title, Genre, PublishedDate, ISBN, Edition)
+VALUES (1, 'To Kill a Mockingbird', 'Fiction', TO_DATE('1960-07-11', 'YYYY-MM-DD'), '9780061120084', 'First');
+
+INSERT INTO Books (BookID, Title, Genre, PublishedDate, ISBN, Edition)
+VALUES (2, '1984', 'Dystopian', TO_DATE('1949-06-08', 'YYYY-MM-DD'), '9780451524935', 'First');
+
+INSERT INTO Authors (AuthorID, FirstName, LastName)
+VALUES (1, 'Harper', 'Lee');
+
+INSERT INTO Authors (AuthorID, FirstName, LastName)
+VALUES (2, 'George', 'Orwell');
+
+INSERT INTO Customer (Customer_id, FirstName, LastName, Email, JoinDate, PhoneNumber)
+VALUES (1, 'John', 'Doe', 'john.doe@example.com', TO_DATE('2022-01-15', 'YYYY-MM-DD'), '123-456-7890');
+
+INSERT INTO Customer (Customer_id, FirstName, LastName, Email, JoinDate, PhoneNumber)
+VALUES (2, 'Jane', 'Smith', 'jane.smith@example.com', TO_DATE('2022-03-22', 'YYYY-MM-DD'), '987-654-3210');
+
+INSERT INTO Loans (LoanID, BookID, MemberID, LoanDate, ReturnDate)
+VALUES (1, 1, 1, TO_DATE('2023-05-01', 'YYYY-MM-DD'), TO_DATE('2023-05-15', 'YYYY-MM-DD'));
+
+INSERT INTO Loans (LoanID, BookID, MemberID, LoanDate, ReturnDate)
+VALUES (2, 2, 2, TO_DATE('2023-05-10', 'YYYY-MM-DD'), TO_DATE('2023-05-24', 'YYYY-MM-DD'));
+
+-- Step 2: Update existing records
+UPDATE Books SET Edition = 'Second' WHERE BookID = 1;
+
+UPDATE Members
+SET Email = 'john.d.newemail@example.com'
+WHERE MemberID = 1;
+
+-- Step 3: Delete records based on specific criteria
+
+Delete from customer where Customer_id=1;
+

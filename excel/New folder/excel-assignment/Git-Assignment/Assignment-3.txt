@@ -1,0 +1,39 @@
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Bratin Mallick\Git\sample>git add .
+
+C:\Bratin Mallick\Git\sample>git branch -m hotfixes
+
+C:\Bratin Mallick\Git\sample>git checkout hotfixes
+A       newSample.txt
+Already on 'hotfixes'
+
+C:\Bratin Mallick\Git\sample>git status
+On branch hotfixes
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   newSample.txt
+
+
+C:\Bratin Mallick\Git\sample>git commit -m "in hotfixes"
+[hotfixes 5195157] in hotfixes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newSample.txt
+
+C:\Bratin Mallick\Git\sample>git push origin hotfixes
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: To create a merge request for hotfixes, visit:
+remote:   http://gitlab.rpsconsulting.in:8929/b84user28/sample/-/merge_requests/new?merge_request%5Bsource_branch%5D=hotfixes
+remote:
+To http://10.10.16.125:8929/b84user28/sample.git
+ * [new branch]      hotfixes -> hotfixes
+
+
+

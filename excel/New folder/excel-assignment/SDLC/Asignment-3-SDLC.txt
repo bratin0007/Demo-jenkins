@@ -1,0 +1,62 @@
+***Waterfall Model:
+
+Advantages:
+1.Simple and easy to understand.
+2.Well suited for projects where requirements are well-defined and unlikely to change.
+3.Each phase has specific deliverables, making it easy to measure progress.
+
+Disadvantages:
+
+1.Lack of flexibility: difficult to accommodate changes once a phase is completed.
+2.Limited customer involvement until the end of the project.
+3.Testing is typically performed at the end, which can lead to late detection of defects.
+4.Applicability: Suitable for projects with stable requirements and a clear understanding of the end product, such as 
+in traditional engineering projects like construction or manufacturing.
+
+
+***Agile Model:
+
+Advantages:
+1.Highly flexible and adaptive to changing requirements.
+2.Encourages customer collaboration and feedback throughout the development process.
+3.Allows for incremental delivery, which enables early validation of features.
+
+Disadvantages:
+
+1.Requires active customer involvement, which may not always be feasible.
+2.Lack of documentation can lead to knowledge gaps, especially in large teams or long-term projects.
+3.May result in scope creep if not managed properly.
+4.Applicability: Ideal for projects where requirements are likely to change or evolve, such as software development or 
+prototyping in engineering contexts.
+
+
+***Spiral Model:
+
+Advantages:
+1.Incorporates risk management throughout the project lifecycle.
+Allows for iterative development and prototyping.
+2.Well-suited for projects with high uncertainty or evolving requirements.
+
+Disadvantages:
+
+1.Can be complex and difficult to manage, especially for small projects.
+2.Requires significant expertise in risk management and iteration planning.
+3.May lead to schedule and cost overruns if risks are not managed effectively.
+4.Applicability: Suitable for projects where early risk identification and mitigation are critical, such as in complex 
+engineering systems or software projects with evolving requirements.
+
+
+***V-Model:
+
+Advantages:
+1.Emphasizes testing throughout the development lifecycle, leading to early defect detection.
+2.Provides a systematic approach to ensure that each stage has corresponding testing activities.
+3.Well-suited for projects with stringent quality requirements or regulatory compliance.
+
+Disadvantages:
+
+1.Can be rigid and less adaptable to changes compared to Agile or Spiral models.
+2.Limited customer involvement until the later stages of development.
+3.May result in higher upfront costs due to extensive planning and testing activities.
+4.Applicability: Suitable for projects where quality assurance and verification are paramount, such as in safety-critical
+ systems or highly regulated industries like aerospace or medical devices.

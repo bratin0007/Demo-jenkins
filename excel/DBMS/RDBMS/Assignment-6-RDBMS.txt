@@ -1,0 +1,13 @@
+-- Step 1: Create a new user
+CREATE USER 'new_user' IDENTIFIED BY 'password123';
+
+-- Step 2: Grant specific privileges
+GRANT SELECT, INSERT, UPDATE ON mydatabase.* TO 'new_user';
+FLUSH PRIVILEGES;
+
+-- Step 3: Revoke certain privileges
+REVOKE UPDATE ON mydatabase.* FROM 'new_user';
+FLUSH PRIVILEGES;
+
+-- Step 4: Drop the user
+DROP USER 'new_user';

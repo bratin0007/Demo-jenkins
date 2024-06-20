@@ -1,0 +1,60 @@
+Assignment 1: SDLC Overview - Create a one-page infographic that outlines the SDLC phases
+(Requirements, Design, Implementation, Testing, Deployment), highlighting the importance of each
+phase and how they interconnect
+
+
+
+1. Requirements
+
+	Objective: Define what the software should do.
+	Key Activities:
+		Gather requirements from stakeholders
+		Document functional and non-functional requirements.
+		Analyze feasibility
+	Importance: Ensures a clear understanding of what is needed, preventing scope creep and
+	miscommunication.
+
+2. Design	
+	Objective: Plan the software structure.	
+	Key Activities:
+		Create architectural design.
+		Design database schema.
+		Develop detailed technical specifications
+	Importance: Provides a blueprint for development, ensuring all components will work together
+	seamlessly.
+
+3. Implementation
+
+	Objective: Write the code and build the software.
+	Key Activities:
+		Develop and integrate modules.
+		Follow coding standards.
+		Perform initial debugging.
+	Importance: Translates designs into a functional software product.
+4. Testing
+
+	Objective: Ensure the software is defect-free.
+	Key Activities:
+		Conduct unit, integration, and system testing.
+		Perform user acceptance testing (UAT).
+		Identify and fix bugs.
+	Importance: Verifies that the software meets requirements and works as intended, ensuring
+	quality and reliability.
+
+
+5. Deployment
+	Objective: Release the software to users.
+	Key Activities:
+		Plan and execute deployment.
+		Provide user training and documentation.
+		Monitor and maintain post-deployment.
+	Importance: Delivers the product to users and ensures it operates smoothly in the live
+	environment.
+
+
+Interconnection of Phases
+	1.Sequential Flow: Each phase builds upon the previous one, ensuring a structured development
+	process.
+	2.Feedback Loops: Continuous feedback between phases for adjustments and improvements.
+	3.Iterative Process: Revisiting and refining phases as 	needed to enhance the software quality.
+

@@ -1,0 +1,58 @@
+Asiignment-2--------Designing a database schema for a library system involves identifying the necessary entities, their attributes, and the relationships between then. Below is the schema for a library system including tables, fields, and constraints such as 'NOT NULL, UNIQUE, and 'CHECK, We'll also include primary and foreign keys to establish relationships between the tables.
+--------------------------------------------------------------------------------------------------------
+Tables and Fields
+
+1. Books(Book ID (Primary Key, NOT NULL),Title (NOT NULL),Author ID (Foreign Key, NOT NULL),Author ID (Foreign Key, NOT NULL),Author ID (Foreign Key, NOT NULL), Publisher ID (Foreign Key, NOT NULL),PublishedYear (CHECK (PublishedYear >= 1500 AND PublishedYear <= YEAR(CURRENT_DATE)), NOT NULL));
+
+
+
+2. Authors(Author ID (Primary Key, NOT NULL),Name, BirthYear (CHECK (BirthYear >1900 AND BirthYear YEAR(CURRENT_DATE))),Country);
+
+
+3. Publishers(Publisher ID (Primary Key, NOT NULL),Name, Address); 
+
+
+4. Customer(Customer_ID (Primary Key, NOT NULL), Name ,Email ,Phone (UNIQUE, NOT NULL), Address); 
+
+
+5. Loans(LoanID (Primary Key, NOT NULL), BookID (Foreign Key, NOT NULL), Customer_ID (Foreign Key, NOT NULL), LoanDate (NOT NULL), DueDate (NOT NULL),ReturnDate)
+
+
+
+Relationships
+
+1. Books:
+
+	Each book is written by one author and published by one publisher.
+
+	One-to-Many relationship with Authors and Publishers.
+
+2. Authors:
+
+	An author can write multiple books.
+
+3. Publishers
+
+	A publisher can publish multiple books.
+
+4.Customer
+
+	A Customer can borrow multiple books (through the Loans table).
+
+	A Customer can reserve multiple books (through the Reservations table).
+
+5. Loans
+
+	Each loan is for one book and one member
+
+
+
+
+
+
+
+
+
+
+
+

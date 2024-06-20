@@ -1,0 +1,110 @@
+Assignment1:Synchronization and Inter-thread Communication
+
+Implement a producer-consumer problem using wait() and notify() methods to handle the correct processing sequence between threads.
+
+package a1_producerconsumer;
+
+public class Consumer extends Thread {
+    private final SharedBuffer buffer;
+
+    public Consumer(SharedBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                buffer.consume();
+                Thread.sleep(1000); // Simulate time taken to consume an item
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
+
+
+package a1_producerconsumer;
+
+public class Producer extends Thread {
+    private final SharedBuffer buffer;
+
+    public Producer(SharedBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+    @Override
+    public void run() {
+        int item = 0;
+        while (true) {
+            try {
+                buffer.produce(item++);
+                Thread.sleep(500); // Simulate time taken to produce an item
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
+
+
+package a1_producerconsumer;
+
+public class ProducerConsumerProblem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SharedBuffer buffer = new SharedBuffer(5);
+        Producer producer = new Producer(buffer);
+        Consumer consumer = new Consumer(buffer);
+
+        producer.start();
+        consumer.start();
+	}
+
+}
+
+
+
+package a1_producerconsumer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SharedBuffer {
+    private final List<Integer> buffer = new ArrayList<>();
+    private final int capacity;
+
+    public SharedBuffer(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public synchronized void produce(int item) throws InterruptedException {
+        while (buffer.size() == capacity) {
+            wait();
+        }
+        buffer.add(item);
+        System.out.println("Produced: " + item);
+        notifyAll();
+    }
+
+    public synchronized int consume() throws InterruptedException {
+        while (buffer.isEmpty()) {
+            wait();
+        }
+        int item = buffer.remove(0);
+        System.out.println("Consumed: " + item);
+        notifyAll();
+        return item;
+    }
+}
+
+
+
+
+

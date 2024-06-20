@@ -1,0 +1,81 @@
+Assignment 1: Analyze a given business scenario and create an ER diagram that includes entities, relationships, attributes, and cardinality. Ensure that the diagram reflects proper normalization up to the third normal form.
+
+
+
+----------------------------------------------------
+
+let's consider a simple e-commerce system.
+Business Scenario
+An e-commerce system requires tracking of customers, orders, products, and payments. The system should handle the following:
+
+1.Customers have unique identifiers, names, contact details, and addresses.
+2.Products have unique identifiers, names, descriptions, prices, and stock quantities.
+3.Orders have unique identifiers, dates, and statuses. 
+4.Payments have unique identifiers, amounts, dates, and methods. Each payment is associated with one order.
+
+Entities and Attributes-------------------
+
+1.Customer:(CustomerID (Primary Key), Name, ContactDetails, Address)
+2.Product:(ProductID (Primary Key), ProductName, Description, Price, StockQuantity)
+3.Order:(OrderID (Primary Key), OrderDate, Status,CustomerID (Foreign Key))
+4.OrderDetails(OrderID (Composite Key, Foreign Key),ProductID (Composite Key, Foreign Key),Quantity)
+5.Payment:(PaymentID (Primary Key), Amount, PaymentDate, PaymentMethod, OrderID (Foreign Key))
+
+Relationships and Cardinality---------------------------------
+Customer and Order:
+One Customer can place many Orders (1
+).
+
+
+Each Order is placed by one Customer.
+Order and OrderDetails:
+One Order can include many OrderDetails (1
+)
+
+Each OrderDetail is associated with one Order.
+Product and OrderDetails:
+One Product can appear in many OrderDetails (1
+).
+
+Each OrderDetail includes one Product.
+Order and Payment:
+One Order can have one or more Payments (1
+).
+Each Payment is associated with one Order.
+
+
+Normalization
+The entities and relationships have been designed to ensure that the data is normalized up to the third normal form (3NF):
+
+1NF: All attributes contain atomic values.
+2NF: All non-key attributes are fully functionally dependent on the primary key.
+3NF: There are no transitive dependencies.
+ER Diagram
+							1:M
+Customer (CustomerID, Name, ContactDetails, Address)-----------------Order (OrderID, OrderDate, Status, CustomerID)
+
+							1:M
+Order (OrderID, OrderDate, Status, CustomerID)----------------------------OrderDetails (OrderID, ProductID, Quantity)
+  
+							M:1
+OrderDetails (OrderID, ProductID, Quantity)-----------------------------Product(ProductID, ProductName, Description, Price, StockQuantity)
+
+							M:1
+OrderDetails (OrderID, ProductID, Quantity)----------------------------- Payment (PaymentID, Amount, PaymentDate, PaymentMethod, OrderID)
+
+
+
+Detailed Explanation:-------
+Customer to Order:
+
+A customer can have multiple orders, but each order belongs to only one customer.
+Order to OrderDetails:
+
+An order can include multiple products, but each order detail entry relates to one product in one specific order.
+Product to OrderDetails:
+
+A product can be part of multiple orders (through order details), but each order detail entry references only one product.
+Order to Payment:
+
+An order can be paid for with multiple payments, but each payment is for one specific order.
+

@@ -1,0 +1,38 @@
+Assignment 1: Create an infographic illustrating the Test-Driven Development (TDD) process. Highlight steps like writing tests before code, benefits such as bug reduction, and how it fosters software reliability. 
+
+Test-Driven Development (TDD) 
+Steps of Test Driven Development
+
+Write Test Cases
+
+Illustration: Programmer writing test cases before writing actual code.
+Caption: "Write failing test cases based on desired behavior."
+Run Tests
+
+Illustration: Test automation tool executing the written test cases.
+Caption: "Run tests to ensure they fail as expected."
+Write Code
+
+Illustration: Programmer coding to make the failing test cases pass.
+Caption: "Write minimal code to make failing tests pass."
+Run Tests Again
+
+Illustration: Test automation tool running the tests again after code changes.
+Caption: "Ensure all tests pass after code modifications."
+Refactor Code
+
+Illustration: Programmer refactoring code to improve design without changing behavior.
+Caption: "Refactor code to improve clarity and maintainability."
+Repeat
+
+Illustration: Circular arrow indicating the iterative nature of the TDD process.
+Caption: "Repeat the cycle for each new feature or code change."
+Section 2: Benefits of Test Driven Development
+
+ 
+Benefits of TDD
+ 1. Bug Reduction - Early defect detection.
+ 2. Better Design - Modular, decoupled code.
+ 3. Documentation - Tests as living documentation.
+ 4. Confidence in Changes - Safe refactoring and feature addition. 
+5. Continuous Integration - Supports automated testing

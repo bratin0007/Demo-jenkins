@@ -1,0 +1,58 @@
+Assignment 2:Synchronized Blocks and Methods
+Write a program that simulates a bank account being accessed by multiple threads to perform deposits and withdrawals using synchronized methods to prevent race conditions.
+
+
+package a2_accountwithdrawlsdeposit;
+
+
+class client5{
+	int amount = 20000;
+	
+	synchronized void withdraw(int amount) {
+		System.out.println("Amount Withdrawl...");
+		if(this.amount<amount) {
+			System.out.println("Insufficient funds to make transaction");
+			try {
+				wait();
+			}catch(Exception ex) {
+				System.out.println("Fund TRansfer Completed!!!");
+			} 
+			this.amount=this.amount-amount;
+			System.out.println("Fund Transfer Completed !!!");
+		}
+	}
+	synchronized void deposit(int amount) {
+		System.out.println("Amount to be Credited...");
+		this.amount=this.amount+amount;
+		System.out.println("Funds Credited Successfully....");
+		notify();
+	}
+}
+
+
+
+public class WithdrawDeposit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+client5 cObj = new client5();
+		
+		new Thread() {
+			public void run() {
+				cObj.withdraw(25000);
+			}
+		} .start();
+		
+		new Thread(){
+			public void run() {
+				cObj.deposit(10000);
+			}
+		} .start();
+	}
+
+}
+
+
+
+
+

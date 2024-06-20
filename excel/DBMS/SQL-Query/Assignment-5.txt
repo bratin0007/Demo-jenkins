@@ -1,0 +1,31 @@
+-- 1. Begin a transaction
+-- (In Oracle, a transaction begins implicitly with any DML statement, so there's no explicit BEGIN TRANSACTION statement)
+
+-- 2. Insert new records into the 'orders' table and set SAVEPOINTs
+
+-- Insert the first order
+INSERT INTO orders (order_id, customer_id, order_date, order_value)
+VALUES (12345, 67890, TO_DATE('2024-06-10', 'YYYY-MM-DD'), 250.00);
+
+-- Set SAVEPOINT after the first INSERT
+SAVEPOINT sp1;
+
+-- Insert the second order
+INSERT INTO orders (order_id, customer_id, order_date, order_value)
+VALUES (12346, 67891, TO_DATE('2024-06-11', 'YYYY-MM-DD'), 300.00);
+
+-- Set SAVEPOINT after the second INSERT
+SAVEPOINT sp2;
+
+-- Insert the third order
+INSERT INTO orders (order_id, customer_id, order_date, order_value)
+VALUES (12347, 67892, TO_DATE('2024-06-12', 'YYYY-MM-DD'), 350.00);
+
+-- Set SAVEPOINT after the third INSERT
+SAVEPOINT sp3;
+
+-- 3. Rollback to the second SAVEPOINT
+ROLLBACK TO sp2;
+
+-- 4. Commit the overall transaction
+COMMIT;

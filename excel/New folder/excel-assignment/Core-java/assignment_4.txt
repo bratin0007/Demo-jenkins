@@ -1,0 +1,108 @@
+Assignment 4:Executors, Concurrent Collections, CompletableFuture
+Use an ExecutorService to parallelize a task that calculates prime numbers up to a given number and then use CompletableFuture to write the results to a file asynchronously.
+
+
+/*
+ * Task 6: Executors, Concurrent Collections, CompletableFuture
+* Use an ExecutorService to parallelize a task that calculates prime numbers 
+* up to a given number and then use CompletableFuture to write the 
+* results to a file asynchronously.
+ */
+
+package a4_primecalculator;
+
+	import java.io.BufferedWriter;
+	import java.io.FileWriter;
+	import java.io.IOException;
+	import java.util.ArrayList;
+	import java.util.List;
+	import java.util.concurrent.CompletableFuture;
+	import java.util.concurrent.ExecutionException;
+	import java.util.concurrent.ExecutorService;
+	import java.util.concurrent.Executors;
+	import java.util.concurrent.Future;
+
+	public class PrimeCalculatorAPPP {
+	    public static void main(String[] args) {
+	        int range = 100000;
+	        int numThreads = 4;
+	        int chunkSize = range / numThreads;
+
+	        ExecutorService executorService = Executors.newFixedThreadPool(numThreads);
+	        List<Future<List<Integer>>> futures = new ArrayList<>();
+
+	        for (int i = 0; i < numThreads; i++) {
+	            int start = i * chunkSize + 1;
+	            int end = (i + 1) * chunkSize;
+	            PrimeCalculator calculator = new PrimeCalculator(start, end);
+	            futures.add(executorService.submit(calculator));
+	        }
+
+	        executorService.shutdown();
+
+	        List<Integer> allPrimes = new ArrayList<>();
+	        for (Future<List<Integer>> future : futures) {
+	            try {
+	                allPrimes.addAll(future.get());
+	            } catch (InterruptedException | ExecutionException e) {
+	                e.printStackTrace();
+	            }
+	        }
+
+	        CompletableFuture.runAsync(() -> writePrimesToFile(allPrimes), Executors.newSingleThreadExecutor())
+	            .thenRun(() -> System.out.println("Prime numbers have been written to the file."));
+	    }
+
+	    private static void writePrimesToFile(List<Integer> primes) {
+	        try (BufferedWriter writer = new BufferedWriter(new FileWriter("primes.txt"))) {
+	            for (Integer prime : primes) {
+	                writer.write(prime.toString());
+	                writer.newLine();
+	            }
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}
+
+
+
+
+
+package a4_primecalculator;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
+
+public class PrimeCalculator implements Callable<List<Integer>> {
+    private final int start;
+    private final int end;
+
+    public PrimeCalculator(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    @Override
+    public List<Integer> call() {
+        List<Integer> primes = new ArrayList<>();
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                primes.add(i);
+            }
+        }
+        return primes;
+    }
+
+    private boolean isPrime(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
+
+
+
